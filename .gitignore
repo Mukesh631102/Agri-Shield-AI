@@ -1,0 +1,35 @@
+# Secrets
+.env
+.insurance_pool_keypair
+*-key.json
+*.keypair
+*.key
+
+# Machine Learning Models and Datasets
+*.pth
+*.pkl
+*.h5
+*.csv
+*.npy
+*.pt
+*.save
+*.bin
+*.h5py
+
+# Environment and Cache
+venv/
+env/
+.env/
+__pycache__/
+*.pyc
+.vscode/
+.idea/
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Explicitly excluded by user
+pest and disease/
+
+# Notes:
+# .db files and .json files are INTENTIONALLY NOT ignored as per user request.
