@@ -5,10 +5,13 @@ from PIL import Image
 import io
 import os
 
-# Define the absolute path to the model file
+# Define the path dynamically relative to the project root
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-# Referencing the model from the "pest and disease" directory
-MODEL_PATH = r"c:\Users\pmuke\OneDrive\Desktop\saveetha\pest and disease\plant_disease_model.pth"
+PROJECT_ROOT = os.path.abspath(os.path.join(BASE_DIR, "..", "..", ".."))
+MODEL_PATH = os.environ.get(
+    "PLANT_DISEASE_MODEL_PATH",
+    os.path.join(PROJECT_ROOT, "pest and disease", "plant_disease_model.pth")
+)
 
 DISEASE_INFO = {
     "Bacterial_Spot": {
